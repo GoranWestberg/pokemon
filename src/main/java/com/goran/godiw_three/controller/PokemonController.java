@@ -25,11 +25,11 @@ public class PokemonController {
     }
 
     @PostMapping("pokemon/pokemons/create")
-    public String createPokemon(@RequestParam String name,
+    public void createPokemon(@RequestParam String name,
                                 @RequestParam String type,
                                 @RequestParam Trainer trainer) {
 
-        return pokeService.addPokemon(name, type, trainer);
+        pokeService.addPokemon(name, type, trainer);
     }
 
     @PutMapping("pokemon/pokemons/edit/{id}")
