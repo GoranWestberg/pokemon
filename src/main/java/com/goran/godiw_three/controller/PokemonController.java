@@ -42,7 +42,7 @@ public class PokemonController {
     }
 
     @DeleteMapping("pokemon/pokemons/delete/{id}")
-    public String deletePokemon(@PathVariable int id) {
-        return pokeService.deletePokemon(id);
+    public void deletePokemon(@PathVariable int id) {
+        pokeService.deletePokemon(id);
     }
 }
